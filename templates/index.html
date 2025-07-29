@@ -13,9 +13,9 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: #fafafa;
-            color: #0a0a0a;
+            font-family: 'Söhne', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #343541;
+            color: #ececf1;
             line-height: 1.6;
         }
 
@@ -36,12 +36,12 @@
         .header h1 {
             font-size: 2rem;
             font-weight: 700;
-            color: #0a0a0a;
+            color: #ececf1;
             margin-bottom: 0.5rem;
         }
 
         .header p {
-            color: #6b7280;
+            color: #8e8ea0;
             font-size: 1rem;
         }
 
@@ -53,10 +53,11 @@
 
         .mode-toggle {
             display: flex;
-            background: #f4f4f5;
+            background: #40414f;
             border-radius: 8px;
             padding: 4px;
             gap: 4px;
+            border: 1px solid #565869;
         }
 
         .mode-btn {
@@ -68,13 +69,18 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #6b7280;
+            color: #8e8ea0;
         }
 
         .mode-btn.active {
-            background: white;
-            color: #0a0a0a;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            background: #19c37d;
+            color: white;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .mode-btn:hover:not(.active) {
+            background: #565869;
+            color: #ececf1;
         }
 
         .chat-container {
@@ -101,7 +107,7 @@
         }
 
         .messages::-webkit-scrollbar-thumb {
-            background: #d1d5db;
+            background: #565869;
             border-radius: 2px;
         }
 
@@ -128,19 +134,19 @@
         }
 
         .message.user .message-content {
-            background: #0a0a0a;
+            background: #19c37d;
             color: white;
         }
 
         .message.assistant .message-content {
-            background: #f4f4f5;
-            color: #0a0a0a;
-            border: 1px solid #e5e7eb;
+            background: #444654;
+            color: #ececf1;
+            border: 1px solid #565869;
         }
 
         .message-time {
             font-size: 0.75rem;
-            color: #9ca3af;
+            color: #8e8ea0;
             margin-top: 0.25rem;
             padding: 0 0.5rem;
         }
@@ -148,28 +154,28 @@
         .welcome-message {
             text-align: center;
             padding: 3rem 2rem;
-            color: #6b7280;
+            color: #8e8ea0;
         }
 
         .welcome-message h2 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #0a0a0a;
+            color: #ececf1;
             margin-bottom: 0.5rem;
         }
 
         .input-container {
-            background: white;
-            border: 1px solid #e5e7eb;
+            background: #40414f;
+            border: 1px solid #565869;
             border-radius: 12px;
             overflow: hidden;
             transition: all 0.2s ease;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .input-container:focus-within {
-            border-color: #0a0a0a;
-            box-shadow: 0 0 0 1px #0a0a0a;
+            border-color: #19c37d;
+            box-shadow: 0 0 0 1px #19c37d;
         }
 
         .input-wrapper {
@@ -188,10 +194,11 @@
             font-size: 0.875rem;
             line-height: 1.5;
             background: transparent;
+            color: #ececf1;
         }
 
         .message-input::placeholder {
-            color: #9ca3af;
+            color: #8e8ea0;
         }
 
         .input-controls {
@@ -199,8 +206,8 @@
             align-items: center;
             justify-content: space-between;
             padding: 0.75rem 1rem;
-            border-top: 1px solid #f3f4f6;
-            background: #fafafa;
+            border-top: 1px solid #565869;
+            background: #2d2e3f;
         }
 
         .control-group {
@@ -214,19 +221,20 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 0.75rem;
-            border: 1px solid #e5e7eb;
-            background: white;
+            border: 1px solid #565869;
+            background: #40414f;
             border-radius: 8px;
             font-size: 0.75rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #6b7280;
+            color: #8e8ea0;
         }
 
         .control-btn:hover {
-            background: #f9fafb;
-            border-color: #d1d5db;
+            background: #565869;
+            border-color: #6f7085;
+            color: #ececf1;
         }
 
         .send-btn {
@@ -235,22 +243,27 @@
             justify-content: center;
             width: 32px;
             height: 32px;
-            border: 1px solid #e5e7eb;
-            background: white;
+            border: 1px solid #565869;
+            background: #40414f;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #9ca3af;
+            color: #8e8ea0;
         }
 
         .send-btn.active {
-            background: #0a0a0a;
-            border-color: #0a0a0a;
+            background: #19c37d;
+            border-color: #19c37d;
             color: white;
         }
 
         .send-btn:hover.active {
-            background: #1f2937;
+            background: #16b571;
+        }
+
+        .send-btn:hover:not(.active) {
+            background: #565869;
+            color: #ececf1;
         }
 
         .action-buttons {
@@ -266,20 +279,22 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.5rem 1rem;
-            border: 1px solid #e5e7eb;
-            background: #f9fafb;
+            border: 1px solid #565869;
+            background: #40414f;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #374151;
+            color: #ececf1;
             white-space: nowrap;
         }
 
         .action-btn:hover {
-            background: #f3f4f6;
-            border-color: #d1d5db;
+            background: #565869;
+            border-color: #6f7085;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .typing-indicator {
@@ -287,8 +302,8 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.875rem 1rem;
-            background: #f4f4f5;
-            border: 1px solid #e5e7eb;
+            background: #444654;
+            border: 1px solid #565869;
             border-radius: 12px;
             max-width: 80px;
             margin-bottom: 1.5rem;
@@ -297,7 +312,7 @@
         .typing-dot {
             width: 6px;
             height: 6px;
-            background: #9ca3af;
+            background: #8e8ea0;
             border-radius: 50%;
             animation: typing 1.4s infinite ease-in-out;
         }
@@ -326,18 +341,38 @@
             top: 1rem;
             right: 1rem;
             padding: 0.5rem;
-            background: white;
-            border: 1px solid #e5e7eb;
+            background: #40414f;
+            border: 1px solid #565869;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s ease;
-            color: #6b7280;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            color: #8e8ea0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .reset-btn:hover {
-            background: #f9fafb;
-            color: #374151;
+            background: #565869;
+            color: #ececf1;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Scrollbar styling for better ChatGPT look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #343541;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #565869;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6f7085;
         }
 
         @media (max-width: 768px) {
@@ -365,6 +400,27 @@
                 justify-content: center;
                 width: 100%;
             }
+        }
+
+        /* Additional ChatGPT-like enhancements */
+        .message.assistant .message-content a {
+            color: #19c37d;
+            text-decoration: underline;
+        }
+
+        .message.user .message-content a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Focus states */
+        .control-btn:focus,
+        .send-btn:focus,
+        .action-btn:focus,
+        .mode-btn:focus,
+        .reset-btn:focus {
+            outline: 2px solid #19c37d;
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -600,7 +656,7 @@
             formatMessage(text) {
                 // Convert URLs to clickable links
                 text = text.replace(/https?:\/\/[^\s]+/g, url => 
-                    `<a href="${url}" target="_blank" style="color: #2563eb; text-decoration: underline;">${url}</a>`
+                    `<a href="${url}" target="_blank">${url}</a>`
                 );
                 
                 // Convert **text** to bold
